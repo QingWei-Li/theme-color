@@ -1,6 +1,6 @@
 {
   "name": "theme-color",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "material theme color generator",
   "bin": {
     "theme-color": "bin/theme-color"
