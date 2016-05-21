@@ -1,14 +1,13 @@
 {
   "name": "theme-color",
   "version": "0.1.0",
-  "description": "Generator a material theme color is easy",
+  "description": "material theme color generator",
   "bin": {
     "theme-color": "bin/theme-color"
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "xo && nyc ava",
-    "deploy": "gh-pages -d demo"
+    "test": "xo && nyc ava"
   },
   "xo": {
     "semicolon": false,
@@ -36,7 +35,7 @@
   },
   "devDependencies": {
     "ava": "^0.14.0",
-    "gh-pages": "^0.11.0",
+    "coveralls": "^2.11.9",
     "nyc": "^6.4.3",
     "xo": "^0.15.1"
   }

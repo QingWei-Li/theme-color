@@ -72,7 +72,7 @@ var _renderCSS = function (obj, opts, attribute) {
     _className[originalKey] = className
     colorCSS = '.' + className + ' {' +
                   attribute + ': ' + color + ';' +
-               '}'
+               '}\n'
 
     css += colorCSS
   })
@@ -114,7 +114,6 @@ ThemeColor.prototype.css = function (opts) {
 
   opts = opts || {}
   css += _renderCSS(this.theme, opts, 'background-color')
-  // css += _renderCSS(textColor, opts, 'color')
 
   return css
 }

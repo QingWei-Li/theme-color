@@ -46,7 +46,7 @@ test('yellow, red', function (t) {
 
 test('css method', function (t) {
   var result = new ThemeColor('blue', 'blue').css()
-  var expect = '.light-primary {background-color: #BBDEFB;}.primary {background-color: #2196F3;}.dark-primary {background-color: #1976D2;}.accent {background-color: #448AFF;}'
+  var expect = '.light-primary {background-color: #BBDEFB;}\n.primary {background-color: #2196F3;}\n.dark-primary {background-color: #1976D2;}\n.accent {background-color: #448AFF;}\n'
 
   t.is(result, expect)
 })
@@ -56,14 +56,14 @@ test('custom classname', function (t) {
     prefix: 'color-',
     primary: 'main'
   })
-  var expect = '.color-light-primary {background-color: #BBDEFB;}.color-main {background-color: #2196F3;}.color-dark-primary {background-color: #1976D2;}.color-accent {background-color: #448AFF;}'
+  var expect = '.color-light-primary {background-color: #BBDEFB;}\n.color-main {background-color: #2196F3;}\n.color-dark-primary {background-color: #1976D2;}\n.color-accent {background-color: #448AFF;}\n'
 
   t.is(result, expect)
 
   var result2 = new ThemeColor('blue', 'blue').css({
     primary: 'main'
   })
-  var expect2 = '.light-primary {background-color: #BBDEFB;}.main {background-color: #2196F3;}.dark-primary {background-color: #1976D2;}.accent {background-color: #448AFF;}'
+  var expect2 = '.light-primary {background-color: #BBDEFB;}\n.main {background-color: #2196F3;}\n.dark-primary {background-color: #1976D2;}\n.accent {background-color: #448AFF;}\n'
 
   t.is(result2, expect2)
 })
