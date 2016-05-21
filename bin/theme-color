@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var fs = require('fs')
+var path = require('path')
+var render = require('json-templater/string')
+var ThemeColor = require('../src/index.js')
+
+program
+  .usage('[primary-color] [accent-color] [options]')
+  .version(require('../package.json').version)
+  .option('-o, --output <filename>', 'output css file')
+  .option('-c, --config <filename>', 'config file')
+  .option('-d --demo <filename>', 'output demo html file')
+  .parse(process.argv)
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp()
+  process.exit(0)
+}
+
+if (program.config) {
+  var config = JSON.parse(fs.readFileSync(program.config).toString())
+
+  program.args = config.color || program.args
+  program.css = config.css
+}
+
+var themeColor = new ThemeColor(program.args[0], program.args[1])
+var themeCSS = themeColor.css(program.css)
+
+console.log(JSON.stringify(themeColor.get(), false, '  '))
+
+if (program.output) {
+  fs.writeFileSync(program.output, themeCSS)
+  console.log('CSS output to', program.output)
+}
+
+if (program.demo) {
+  var demoHtml
+  var style = '<style>' + themeCSS + '</style>'
+  var params = themeColor._className || {}
+
+  if (program.output) {
+    style = '<link rel="stylesheet" href="' + program.output + '" />'
+  }
+
+  params.style = style
+  demoHtml = fs.readFileSync(path.join(__dirname, 'demo.tpl')).toString()
+  demoHtml = render(demoHtml, params)
+
+  fs.writeFileSync(program.demo, demoHtml)
+  console.log('HTML output to', program.demo)
+}

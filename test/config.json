@@ -1,0 +1,9 @@
+{
+  "color": ["blue", "red"],
+  "css": {
+    "primary": "abc",
+    "darkPrimary": "abc2",
+    "lightPrimary": "abc3",
+    "accent": "abc4"
+  }
+}

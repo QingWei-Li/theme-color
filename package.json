@@ -1,0 +1,43 @@
+{
+  "name": "theme-color",
+  "version": "0.1.0",
+  "description": "Generator a material theme color is easy",
+  "bin": {
+    "theme-color": "bin/theme-color"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "xo && nyc ava",
+    "deploy": "gh-pages -d demo"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "ignores": [
+      "src/colors.js",
+      "demo/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QingWei-Li"
+  },
+  "keywords": [
+    "material",
+    "css",
+    "theme",
+    "color"
+  ],
+  "author": "qingwei-li <cinwell.li@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "json-templater": "^1.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "gh-pages": "^0.11.0",
+    "nyc": "^6.4.3",
+    "xo": "^0.15.1"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.DS_Store
+etc
+.idea
+coverage
+.nyc_output
+.coveralls.yml
+demo
