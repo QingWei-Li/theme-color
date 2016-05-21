@@ -103,7 +103,12 @@ output
 
 
 ## CLI
-### -c --config <filename>
+
+```shell
+theme-color [primayColor] [accentColor] [options]
+```
+
+### `-c --config <filename>`
 config file. like
 ```json
 {
@@ -119,10 +124,10 @@ config file. like
 }
 ```
 
-### -o --output <filename>
+### `-o --output <filename>`
 output css file.
 
-### -d --demo <filename>
+### `-d --demo <filename>`
 output demo html file.
 
 ## License
