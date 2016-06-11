@@ -1,4 +1,6 @@
 # theme-color
+
+[![Join the chat at https://gitter.im/QingWei-Li/theme-color](https://badges.gitter.im/QingWei-Li/theme-color.svg)](https://gitter.im/QingWei-Li/theme-color?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/QingWei-Li/theme-color.svg?branch=master)](https://travis-ci.org/QingWei-Li/theme-color) [![Coverage Status](https://coveralls.io/repos/github/QingWei-Li/theme-color/badge.svg?branch=master)](https://coveralls.io/github/QingWei-Li/theme-color?branch=master) [![npm](https://img.shields.io/npm/v/theme-color.svg?maxAge=3600)](https://www.npmjs.com/package/theme-color)
 > Material theme color generator.
 
